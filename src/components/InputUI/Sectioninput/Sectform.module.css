@@ -1,0 +1,82 @@
+.sectform {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectform .inner {
+  z-index: 1;
+  position: relative;
+  padding: 1rem;
+  width: 100%;
+  max-width: 30%;
+  height: 60%;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sectform .inner .tables {
+  width: 100%;
+  height: 100%;
+}
+.sectform .inner .tables table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2rem 0;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3) inset;
+  height: 50%;
+}
+.sectform .inner .tables table tr {
+  display: flex;
+}
+.sectform .inner .tables table tr th {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+.sectform .inner .tables table tr td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectform .inner .tables table tr td input {
+  width: 5rem;
+  text-align: center;
+}
+.sectform .inner .tables table tr td select {
+  width: 5rem;
+  text-align: center;
+}
+.sectform .inner .tables table tr td input[type=number]::-webkit-outer-spin-button,
+.sectform .inner .tables table tr td input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.sectform .inner .tables table tr td input[type=number] {
+  -moz-appearance: textfield;
+}
+.sectform .inner .btn {
+  display: flex;
+  padding: 1rem 0 0 0;
+}
+.sectform .inner .btn button {
+  margin: 1rem 1rem;
+  width: 3rem;
+  height: 2rem;
+  background-color: rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  border: 1px solid rgba(114, 107, 107, 0.5);
+}/*# sourceMappingURL=Sectform.module.css.map */

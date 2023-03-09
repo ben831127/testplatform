@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  background-color: rgb(225, 225, 225);
+  color: black;
+  height: 6vh;
+  align-items: center;
+}
+.nav div {
+  padding: 1rem 1rem;
+  margin: 0rem 2rem;
+  cursor: pointer;
+}
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0rem 5rem;
+}
+.nav ul li {
+  padding: 1rem 2rem;
+  cursor: pointer;
+}/*# sourceMappingURL=Nav.module.css.map */

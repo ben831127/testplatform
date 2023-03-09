@@ -1,0 +1,170 @@
+.gridinput {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gridinput .inner {
+  z-index: 1;
+  position: relative;
+  padding: 1rem;
+  width: 100%;
+  max-width: 60%;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gridinput .inner .grid {
+  display: flex;
+}
+.gridinput .inner .grid .x,
+.gridinput .inner .grid .y,
+.gridinput .inner .grid .z {
+  overflow-y: scroll;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 0.5vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 18vw;
+  height: 20vw;
+  align-items: center;
+}
+.gridinput .inner .grid .x h4,
+.gridinput .inner .grid .y h4,
+.gridinput .inner .grid .z h4 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.gridinput .inner .grid .x hr,
+.gridinput .inner .grid .y hr,
+.gridinput .inner .grid .z hr {
+  margin: 3px 0 0;
+  width: 90%;
+  border: 2px solid gray;
+}
+.gridinput .inner .grid .x table,
+.gridinput .inner .grid .y table,
+.gridinput .inner .grid .z table {
+  width: 100%;
+  font-size: 1.2rem;
+}
+.gridinput .inner .grid .x table tr,
+.gridinput .inner .grid .y table tr,
+.gridinput .inner .grid .z table tr {
+  border-style: solid;
+}
+.gridinput .inner .grid .x table tr td,
+.gridinput .inner .grid .y table tr td,
+.gridinput .inner .grid .z table tr td {
+  padding: 0 0.1rem;
+  width: 8vw;
+  height: 2vw;
+  justify-self: center;
+  text-align: center;
+}
+.gridinput .inner .grid .x table tr td input,
+.gridinput .inner .grid .y table tr td input,
+.gridinput .inner .grid .z table tr td input {
+  justify-self: center;
+  text-align: center;
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+.gridinput .inner .grid .x table tr td input[type=number]::-webkit-outer-spin-button,
+.gridinput .inner .grid .x table tr td input[type=number]::-webkit-inner-spin-button,
+.gridinput .inner .grid .y table tr td input[type=number]::-webkit-outer-spin-button,
+.gridinput .inner .grid .y table tr td input[type=number]::-webkit-inner-spin-button,
+.gridinput .inner .grid .z table tr td input[type=number]::-webkit-outer-spin-button,
+.gridinput .inner .grid .z table tr td input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.gridinput .inner .grid .x table tr td input[type=number],
+.gridinput .inner .grid .y table tr td input[type=number],
+.gridinput .inner .grid .z table tr td input[type=number] {
+  -moz-appearance: textfield;
+}
+.gridinput .inner .grid .x table tr .titlebtn,
+.gridinput .inner .grid .y table tr .titlebtn,
+.gridinput .inner .grid .z table tr .titlebtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 3vw;
+  padding: 0;
+}
+.gridinput .inner .grid .x table tr .titlebtn button,
+.gridinput .inner .grid .y table tr .titlebtn button,
+.gridinput .inner .grid .z table tr .titlebtn button {
+  padding: 0;
+  margin: 0;
+  width: 1vw;
+  height: 1vw;
+  background-color: greenyellow;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.gridinput .inner .grid .x table tr .btn,
+.gridinput .inner .grid .y table tr .btn,
+.gridinput .inner .grid .z table tr .btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 3vw;
+  padding: 0;
+}
+.gridinput .inner .grid .x table tr .btn .add,
+.gridinput .inner .grid .y table tr .btn .add,
+.gridinput .inner .grid .z table tr .btn .add {
+  padding: 0;
+  margin: 0;
+  width: 1vw;
+  height: 1vw;
+  background-color: greenyellow;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.gridinput .inner .grid .x table tr .btn .delete,
+.gridinput .inner .grid .y table tr .btn .delete,
+.gridinput .inner .grid .z table tr .btn .delete {
+  padding: 0;
+  margin: 0;
+  width: 1vw;
+  height: 1vw;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.gridinput .inner .checkbtn {
+  display: flex;
+}
+.gridinput .inner .checkbtn .add,
+.gridinput .inner .checkbtn .cancel {
+  margin: 0 0.5vw;
+  width: 3rem;
+  height: 2rem;
+  background-color: rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  border: 1px solid rgba(114, 107, 107, 0.5);
+}/*# sourceMappingURL=Gridinput.module.css.map */

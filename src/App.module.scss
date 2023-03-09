@@ -1,0 +1,23 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  .nav {
+  }
+  .inputcanvas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .inputui {
+      border-right: 1px solid black;
+      width: 20vw;
+      height: 88vh;
+    }
+    .can {
+      outline: none;
+      padding: 0;
+      width: 80vw;
+      height: 88vh;
+    }
+  }
+}

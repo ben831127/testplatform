@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  background-color: rgb(84, 84, 84);
+  color: white;
+  height: 6vh;
+  align-items: center;
+}
+.nav .function {
+  display: flex;
+  padding: 0rem 0rem;
+  margin: 0rem 2rem;
+}
+.nav .function button {
+  width: 4rem;
+  height: 2rem;
+  padding: 0;
+  margin: 0 0.5rem 0 0.5rem;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid;
+  box-shadow: 0 0 5px rgba(225, 225, 225, 0.5);
+}
+.nav .view {
+  display: flex;
+  list-style-type: none;
+  margin: 0rem 5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav .view button {
+  margin: 0rem 1vw;
+  width: 6vh;
+  height: 4vh;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid;
+  box-shadow: 0 0 5px rgba(225, 225, 225, 0.5);
+}/*# sourceMappingURL=Subnav.module.css.map */
