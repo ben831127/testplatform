@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/ben831127.github.io/testplatform/static/css/main.60f25850.css",
-    "main.js": "/ben831127.github.io/testplatform/static/js/main.17c4243e.js",
-    "index.html": "/ben831127.github.io/testplatform/index.html",
-    "main.60f25850.css.map": "/ben831127.github.io/testplatform/static/css/main.60f25850.css.map",
-    "main.17c4243e.js.map": "/ben831127.github.io/testplatform/static/js/main.17c4243e.js.map"
+    "main.css": "/testplatform/static/css/main.60f25850.css",
+    "main.js": "/testplatform/static/js/main.17c4243e.js",
+    "index.html": "/testplatform/index.html",
+    "main.60f25850.css.map": "/testplatform/static/css/main.60f25850.css.map",
+    "main.17c4243e.js.map": "/testplatform/static/js/main.17c4243e.js.map"
   },
   "entrypoints": [
     "static/css/main.60f25850.css",
