@@ -45,11 +45,17 @@ export default function Sectioninput(props) {
                 Edit
               </button>
               <button
-                onClick={() =>
-                  props.setsects(
-                    props.sects.filter((sect) => sect.id !== data.id)
-                  )
-                }
+                onClick={() => {
+                  if (
+                    props.BCelementdatas.filter(
+                      (element) => element.sect === data.name
+                    )[0] === undefined
+                  ) {
+                    props.setsects(
+                      props.sects.filter((sect) => sect.id !== data.id)
+                    );
+                  }
+                }}
               >
                 Delete
               </button>

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/testplatform/static/css/main.60f25850.css",
+    "main.js": "/testplatform/static/js/main.17c4243e.js",
+    "index.html": "/testplatform/index.html",
+    "main.60f25850.css.map": "/testplatform/static/css/main.60f25850.css.map",
+    "main.17c4243e.js.map": "/testplatform/static/js/main.17c4243e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60f25850.css",
+    "static/js/main.17c4243e.js"
+  ]
+}

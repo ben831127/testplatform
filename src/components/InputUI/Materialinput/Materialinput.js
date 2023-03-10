@@ -42,9 +42,16 @@ export default function Materialinput(props) {
                 Edit
               </button>
               <button
-                onClick={() =>
-                  props.setmats(props.mats.filter((mat) => mat.id !== data.id))
-                }
+                onClick={() => {
+                  if (
+                    props.sects.filter((sect) => sect.mat === data.name)[0] ===
+                    undefined
+                  ) {
+                    props.setmats(
+                      props.mats.filter((mat) => mat.id !== data.id)
+                    );
+                  }
+                }}
               >
                 Delete
               </button>

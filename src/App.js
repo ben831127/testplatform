@@ -172,6 +172,7 @@ function App() {
           setmats={setmats}
           trigger={Mattrigger}
           mats={mats}
+          sects={sects}
         ></Materialinput>
         <Sectioninput
           setSecttrigger={setSecttrigger}
@@ -179,6 +180,7 @@ function App() {
           trigger={Secttrigger}
           mats={mats}
           sects={sects}
+          BCelementdatas={BCelementdatas}
         ></Sectioninput>
       </div>
 
