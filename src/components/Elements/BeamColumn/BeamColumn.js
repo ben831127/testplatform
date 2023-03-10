@@ -23,19 +23,41 @@ export default function BeamColumn(props) {
           );
         }}
       >
-        <BC2points
-          sects={props.sects}
-          nodesdatas={props.nodesdatas}
-          startnode={data.startnode}
-          endnode={data.endnode}
-          sect={data.sect}
-        ></BC2points>
+        {props.elementstate.extrude === true && (
+          <BC2points
+            nodesdatas={props.nodesdatas}
+            startnode={data.startnode}
+            endnode={data.endnode}
+            sects={props.sects}
+            mats={props.mats}
+            sect={data.sect}
+            mat={data.mat}
+            displaycolor={props.elementstate.displaycolor}
+          ></BC2points>
+        )}
+        {props.elementstate.extrude === false && (
+          <BeanColumnLine
+            nodesdatas={props.nodesdatas}
+            startnode={data.startnode}
+            endnode={data.endnode}
+            sects={props.sects}
+            mats={props.mats}
+            sect={data.sect}
+            mat={data.mat}
+            displaycolor={props.elementstate.displaycolor}
+            dashed={false}
+          ></BeanColumnLine>
+        )}
         <BeanColumnLine
           nodesdatas={props.nodesdatas}
           startnode={data.startnode}
           endnode={data.endnode}
+          sects={props.sects}
+          mats={props.mats}
+          sect={data.sect}
+          mat={data.mat}
+          displaycolor={props.elementstate.displaycolor}
           dashed={true}
-          color={"black"}
         ></BeanColumnLine>
       </mesh>
     ) : (
@@ -45,13 +67,30 @@ export default function BeamColumn(props) {
           props.setselectBC([...props.selectBC, data.id]);
         }}
       >
-        <BC2points
-          sects={props.sects}
-          nodesdatas={props.nodesdatas}
-          startnode={data.startnode}
-          endnode={data.endnode}
-          sect={data.sect}
-        ></BC2points>
+        {props.elementstate.extrude === true && (
+          <BC2points
+            sects={props.sects}
+            mats={props.mats}
+            nodesdatas={props.nodesdatas}
+            startnode={data.startnode}
+            endnode={data.endnode}
+            sect={data.sect}
+            displaycolor={props.elementstate.displaycolor}
+          ></BC2points>
+        )}
+        {props.elementstate.extrude === false && (
+          <BeanColumnLine
+            nodesdatas={props.nodesdatas}
+            startnode={data.startnode}
+            endnode={data.endnode}
+            sects={props.sects}
+            mats={props.mats}
+            sect={data.sect}
+            mat={data.mat}
+            displaycolor={props.elementstate.displaycolor}
+            dashed={false}
+          ></BeanColumnLine>
+        )}
       </mesh>
     )
   );
@@ -73,17 +112,23 @@ export default function BeamColumn(props) {
           nodesdatas={props.nodesdatas}
           startnode={data.startnode}
           endnode={data.endnode}
+          sects={props.sects}
+          mats={props.mats}
+          sect={data.sect}
+          mat={data.mat}
+          displaycolor={props.elementstate.displaycolor}
           dashed={false}
-          color={
-            props.sects.filter((sect) => sect.name === data.sect)[0].sectcolor
-          }
         ></BeanColumnLine>
         <BeanColumnLine
           nodesdatas={props.nodesdatas}
           startnode={data.startnode}
           endnode={data.endnode}
+          sects={props.sects}
+          mats={props.mats}
+          sect={data.sect}
+          mat={data.mat}
+          displaycolor={props.elementstate.displaycolor}
           dashed={true}
-          color={"black"}
         ></BeanColumnLine>
       </mesh>
     ) : (
@@ -97,10 +142,12 @@ export default function BeamColumn(props) {
           nodesdatas={props.nodesdatas}
           startnode={data.startnode}
           endnode={data.endnode}
+          sects={props.sects}
+          mats={props.mats}
+          sect={data.sect}
+          mat={data.mat}
+          displaycolor={props.elementstate.displaycolor}
           dashed={false}
-          color={
-            props.sects.filter((sect) => sect.name === data.sect)[0].sectcolor
-          }
         ></BeanColumnLine>
       </mesh>
     )

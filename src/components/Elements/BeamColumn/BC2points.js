@@ -11,8 +11,14 @@ export default function BC2points(props) {
     +props.sects.filter((data) => data.name === props.sect)[0].param.B / 100;
   const H =
     +props.sects.filter((data) => data.name === props.sect)[0].param.H / 100;
+
   const sectcolor = props.sects.filter((data) => data.name === props.sect)[0]
     .sectcolor;
+  const matcolor = props.mats.filter(
+    (data) =>
+      data.name ===
+      props.sects.filter((data) => data.name === props.sect)[0].mat
+  )[0].matcolor;
 
   const x1 = +node1.x;
   const y1 = +node1.y;
@@ -84,11 +90,20 @@ export default function BC2points(props) {
       onClick={() => {}}
     >
       <boxGeometry args={[H, length, B]}></boxGeometry>
-      <meshStandardMaterial
-        transparent={true}
-        opacity={0.3}
-        color={sectcolor}
-      />
+      {props.displaycolor === "sect" && (
+        <meshStandardMaterial
+          transparent={true}
+          opacity={0.3}
+          color={sectcolor}
+        />
+      )}
+      {props.displaycolor === "mat" && (
+        <meshStandardMaterial
+          transparent={true}
+          opacity={0.3}
+          color={matcolor}
+        />
+      )}
     </mesh>
   );
 }

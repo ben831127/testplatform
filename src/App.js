@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Nav from "./components/Nav/Mainnav/Nav";
 import Subnav from "./components/Nav/SubNav/Subnav";
 import ModelCanvas from "./components/ModelCanvas/ModelCanvas";
@@ -9,11 +9,18 @@ import Nodeinput from "./components/InputUI/Nodeinput/Nodeinput";
 import BeamColumninput from "./components/InputUI/Elementinput/BeamColumninput";
 import Materialinput from "./components/InputUI/Materialinput/Materialinput";
 import Sectioninput from "./components/InputUI/Sectioninput/Sectioninput";
+import Options from "./components/Options/Options";
 
-// console.log = () => {};
+console.log = () => {};
+console.error = () => {};
 
 function App() {
   const [BCdata, setBCdata] = useState([]); // BeamColumnelements Data
+  const [elementstate, setelementstate] = useState({
+    displaycolor: "sect",
+    extrude: false,
+  });
+  const [Optionstrigger, setOptionstrigger] = useState(false);
   const [view, setview] = useState(1); //
   const [inputview, setinputview] = useState(0); //
   const [selectnode, setselectnode] = useState([]); //
@@ -182,6 +189,12 @@ function App() {
           sects={sects}
           BCelementdatas={BCelementdatas}
         ></Sectioninput>
+        <Options
+          trigger={Optionstrigger}
+          setOptionstrigger={setOptionstrigger}
+          setelementstate={setelementstate}
+          elementstate={elementstate}
+        ></Options>
       </div>
 
       <div className={classes.nav}>
@@ -197,6 +210,8 @@ function App() {
           setMattrigger={setMattrigger}
           setSecttrigger={setSecttrigger}
           setstate={setstate}
+          setelementstate={setelementstate}
+          setOptionstrigger={setOptionstrigger}
         ></Subnav>
       </div>
       <div className={classes.inputcanvas}>
@@ -229,7 +244,9 @@ function App() {
         <div
           className={classes.can}
           style={
-            ((Gridtrigger || Mattrigger || Secttrigger) && { zIndex: -2 }) || {
+            ((Gridtrigger || Mattrigger || Secttrigger || Optionstrigger) && {
+              zIndex: -2,
+            }) || {
               zIndex: 0,
             }
           }
@@ -323,6 +340,8 @@ function App() {
               setselectBC={setselectBC}
               selectBC={selectBC}
               sects={sects}
+              elementstate={elementstate}
+              mats={mats}
             ></ModelCanvas>
           )}
           {view === 2 && (
@@ -339,6 +358,8 @@ function App() {
               setselectBC={setselectBC}
               selectBC={selectBC}
               sects={sects}
+              elementstate={elementstate}
+              mats={mats}
             ></ModelCanvas>
           )}
         </div>

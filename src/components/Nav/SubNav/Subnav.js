@@ -38,13 +38,19 @@ export default function Subnav(props) {
         >
           Section
         </button>
-
         <button
           onClick={() => {
             props.setGridtrigger(true);
           }}
         >
           GridLine
+        </button>
+        <button
+          onClick={() => {
+            props.setOptionstrigger(true);
+          }}
+        >
+          Options
         </button>
 
         <button

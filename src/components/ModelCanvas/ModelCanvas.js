@@ -1,7 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Nodes from "../Elements/Nodes";
-import BeanColumnLine from "../Elements/BeamColumn/BeanColumnLine";
 import BeamColumn from "../Elements/BeamColumn/BeamColumn";
 
 import Camera from "./Camera";
@@ -27,7 +26,9 @@ export default function ModelCanvas(props) {
         setselectBC={props.setselectBC}
         selectBC={props.selectBC}
         sects={props.sects}
+        mats={props.mats}
         state={props.state}
+        elementstate={props.elementstate}
       ></BeamColumn>
       {/* <gridHelper args={[30, 30]}></gridHelper> */}
       <Axeshelper scale={1} width={3}></Axeshelper>
