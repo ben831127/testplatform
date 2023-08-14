@@ -17,9 +17,10 @@ export default function Nodes(props) {
             props.setselectnode(selected);
           });
         }}
+        scale={[1.5, 1.5, 1.5]}
       >
         <sphereGeometry args={[0.1, 50, 50]}></sphereGeometry>
-        <meshStandardMaterial color={"green"} />
+        <meshStandardMaterial color={"black"} />
       </mesh>
     ) : (
       <mesh
@@ -28,9 +29,10 @@ export default function Nodes(props) {
         onClick={() => {
           props.setselectnode([...props.selectnode, data.id]);
         }}
+        scale={[1, 1, 1]}
       >
         <sphereGeometry args={[0.1, 50, 50]}></sphereGeometry>
-        <meshStandardMaterial color={"black"} />
+        <meshStandardMaterial color={"gray"} />
       </mesh>
     )
   );
@@ -63,7 +65,7 @@ export default function Nodes(props) {
           props.setselectnode([...props.selectnode, data.id]);
         }}
       >
-        <Text color={"black"} scale={0.3} fillOpacity={10} visible={true}>
+        <Text color={"gray"} scale={0.3} fillOpacity={10} visible={true}>
           {data.label}
         </Text>
       </mesh>

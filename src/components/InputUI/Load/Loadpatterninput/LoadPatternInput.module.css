@@ -1,0 +1,139 @@
+.patterninput {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.patterninput .inner {
+  z-index: 1;
+  position: relative;
+  padding: 1rem;
+  width: 100%;
+  max-width: 30%;
+  height: 60%;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.patterninput .inner .addtable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.patterninput .inner .addtable table {
+  border-collapse: collapse;
+}
+.patterninput .inner .addtable table thead {
+  border-bottom: 3px solid black;
+}
+.patterninput .inner .addtable table thead tr th {
+  padding: 0.5rem 1.5rem;
+  width: 3rem;
+  text-align: center;
+}
+.patterninput .inner .addtable table tbody tr td {
+  padding: 0.5rem 1.5rem;
+}
+.patterninput .inner .addtable table tbody tr td input,
+.patterninput .inner .addtable table tbody tr td select {
+  width: 5rem;
+  height: 1.5rem;
+  text-align: center;
+}
+.patterninput .inner .addtable table tbody tr td input[type=number]::-webkit-outer-spin-button,
+.patterninput .inner .addtable table tbody tr td input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.patterninput .inner .addtable table tbody tr td input[type=number] {
+  -moz-appearance: textfield;
+}
+.patterninput .inner .addtable button {
+  margin: 0.1rem 0rem 0.5rem 0rem;
+  padding: 0;
+  width: 3rem;
+  height: 2rem;
+  background-color: rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  border: 1px solid rgba(114, 107, 107, 0.5);
+}
+.patterninput .inner .addtable button:hover {
+  background-color: rgba(128, 128, 128, 0.8);
+}
+.patterninput .inner .addtable button:active {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+.patterninput .inner .showpattern {
+  margin: 0;
+  width: 80%;
+  height: 60%;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+}
+.patterninput .inner .showpattern table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.patterninput .inner .showpattern table thead {
+  border-bottom: 3px solid black;
+}
+.patterninput .inner .showpattern table thead tr th {
+  padding: 0rem 0rem;
+  width: 5rem;
+  text-align: center;
+}
+.patterninput .inner .showpattern table tbody tr {
+  border-bottom: 3px solid black;
+  text-align: center;
+  align-items: center;
+}
+.patterninput .inner .showpattern table tbody tr td {
+  justify-content: center;
+  padding: 0.2rem 0rem;
+}
+.patterninput .inner .showpattern table tbody tr td input,
+.patterninput .inner .showpattern table tbody tr td select {
+  width: 5rem;
+  height: 1.5rem;
+  text-align: center;
+  border: none;
+}
+.patterninput .inner .showpattern table tbody tr td input[type=number]::-webkit-outer-spin-button,
+.patterninput .inner .showpattern table tbody tr td input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.patterninput .inner .showpattern table tbody tr td input[type=number] {
+  -moz-appearance: textfield;
+}
+.patterninput .inner .btn {
+  display: flex;
+}
+.patterninput .inner .btn button {
+  margin: 1rem 1rem;
+  padding: 0;
+  width: 3rem;
+  height: 2rem;
+  background-color: rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  border: 1px solid rgba(114, 107, 107, 0.5);
+}
+.patterninput .inner .btn button:hover {
+  background-color: rgba(128, 128, 128, 0.8);
+}
+.patterninput .inner .btn button:active {
+  background-color: rgba(128, 128, 128, 0.3);
+}/*# sourceMappingURL=LoadPatternInput.module.css.map */

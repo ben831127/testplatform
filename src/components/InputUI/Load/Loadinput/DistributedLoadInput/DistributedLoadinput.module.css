@@ -1,0 +1,87 @@
+.distinput {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.distinput .inner {
+  z-index: 1;
+  position: relative;
+  padding: 1rem;
+  width: 30%;
+  min-width: 300px;
+  max-width: 30%;
+  height: 50%;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.distinput .inner .inputvalue {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.distinput .inner .inputvalue table {
+  width: 80%;
+}
+.distinput .inner .inputvalue table tbody tr {
+  text-align: center;
+  display: flex;
+}
+.distinput .inner .inputvalue table tbody tr td {
+  padding: 0.5rem 0rem;
+  width: 50%;
+  border-bottom: 3px solid black;
+  display: flex;
+  justify-content: center;
+}
+.distinput .inner .inputvalue table tbody tr td input,
+.distinput .inner .inputvalue table tbody tr td select {
+  width: 5rem;
+  text-align: center;
+}
+.distinput .inner .inputvalue table tbody tr td input[type=number]::-webkit-outer-spin-button,
+.distinput .inner .inputvalue table tbody tr td input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.distinput .inner .inputvalue table tbody tr td input[type=number] {
+  -moz-appearance: textfield;
+}
+.distinput .inner .inputtype {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.distinput .inner .inputtype div {
+  padding: 0rem 0.5rem;
+  display: flex;
+}
+.distinput .inner .btn {
+  display: flex;
+}
+.distinput .inner .btn button {
+  margin: 1rem 1rem;
+  padding: 0;
+  width: 3rem;
+  height: 2rem;
+  background-color: rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  border: 1px solid rgba(114, 107, 107, 0.5);
+}
+.distinput .inner .btn button button:hover {
+  background-color: rgba(128, 128, 128, 0.8);
+}
+.distinput .inner .btn button button:active {
+  background-color: rgba(128, 128, 128, 0.3);
+}/*# sourceMappingURL=DistributedLoadinput.module.css.map */

@@ -161,6 +161,7 @@
 .gridinput .inner .checkbtn .add,
 .gridinput .inner .checkbtn .cancel {
   margin: 0 0.5vw;
+  padding: 0;
   width: 3rem;
   height: 2rem;
   background-color: rgba(128, 128, 128, 0.5);

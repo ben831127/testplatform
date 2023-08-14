@@ -4,6 +4,7 @@ import classes from "./Options.module.scss";
 export default function Options(props) {
   const displaycolorref = useRef();
   const extruderef = useRef();
+  const releaseref = useRef();
 
   return props.trigger ? (
     <div className={classes.options}>
@@ -28,6 +29,14 @@ export default function Options(props) {
             defaultChecked={props.elementstate.extrude}
           />
         </div>
+        <div className={classes.release}>
+          <div>Release:</div>
+          <input
+            ref={releaseref}
+            type="checkbox"
+            defaultChecked={props.elementstate.release}
+          />
+        </div>
 
         <div className={classes.btn}>
           <button
@@ -35,6 +44,7 @@ export default function Options(props) {
               props.setelementstate({
                 displaycolor: displaycolorref.current.value,
                 extrude: extruderef.current.checked,
+                release: releaseref.current.checked,
               });
               props.setOptionstrigger(false);
             }}

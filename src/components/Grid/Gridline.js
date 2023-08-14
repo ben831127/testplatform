@@ -80,14 +80,6 @@ export default function Gridline(props) {
       {xgridline}
       {ygridline}
       {zgridline}
-      {/* <Line
-        points={[
-          [0, 0, -25],
-          [0, 0, 25],
-        ]}
-        color="gray"
-        lineWidth={props.width}
-      /> */}
     </mesh>
   );
 }

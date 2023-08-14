@@ -38,6 +38,7 @@
   -moz-appearance: textfield;
 }
 .bcinput .add tr td button {
+  padding: 0;
   width: 2rem;
   height: 1.5rem;
   background-color: rgba(128, 128, 128, 0.5);
@@ -102,6 +103,7 @@
 }
 .bcinput .btn button {
   margin: 0 1rem;
+  padding: 0;
   width: 3rem;
   height: 2rem;
   background-color: rgba(128, 128, 128, 0.5);

@@ -20,10 +20,24 @@ export default function Subnav(props) {
             props.setstate(2);
           }}
         >
-          BC<br></br>Elements
+          Frame<br></br>Elements
         </button>
       </ul>
       <ul className={classes.view}>
+        <button
+          onClick={() => {
+            props.setRestraintrigger(true);
+          }}
+        >
+          Restrain
+        </button>
+        <button
+          onClick={() => {
+            props.setReleasetrigger(true);
+          }}
+        >
+          Frame<br></br>Release
+        </button>
         <button
           onClick={() => {
             props.setMattrigger(true);
@@ -40,6 +54,36 @@ export default function Subnav(props) {
         </button>
         <button
           onClick={() => {
+            props.setPatternTrigger(true);
+          }}
+        >
+          Load Pattern
+        </button>
+        <button
+          onClick={() => {
+            props.setCaseTrigger(true);
+          }}
+        >
+          Load Case
+        </button>
+        <button
+          onClick={() => {
+            props.setNodeLoadTrigger(true);
+          }}
+        >
+          Node Load
+        </button>
+
+        <button
+          onClick={() => {
+            props.setDistLoadTrigger(true);
+          }}
+        >
+          Dist. Load
+        </button>
+
+        <button
+          onClick={() => {
             props.setGridtrigger(true);
           }}
         >
@@ -52,7 +96,6 @@ export default function Subnav(props) {
         >
           Options
         </button>
-
         <button
           onClick={() => {
             props.viewhandler();

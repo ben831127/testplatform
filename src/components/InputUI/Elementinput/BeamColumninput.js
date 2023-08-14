@@ -34,8 +34,8 @@ export default function BeamColumninput(props) {
           endnode: newBCelement[1],
           sect: newBCelement[2],
           release: {
-            startreleaes: [1, 1, 1, 1, 1, 1],
-            endrelease: [1, 1, 1, 1, 1, 1],
+            startrelease: [1, 1, 1, 0, 0, 0],
+            endrelease: [1, 1, 1, 0, 0, 0],
           },
         },
       ]);
@@ -188,6 +188,7 @@ export default function BeamColumninput(props) {
                   startnode: +refedit.current.childNodes[1].childNodes[0].value,
                   endnode: +refedit.current.childNodes[2].childNodes[0].value,
                   sect: refedit.current.childNodes[3].childNodes[0].value,
+                  release: data.release,
                 },
               ];
             } else {

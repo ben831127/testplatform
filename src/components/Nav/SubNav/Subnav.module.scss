@@ -31,10 +31,13 @@
     justify-content: space-between;
 
     button {
+      display: block;
+      align-items: center;
       margin: 0rem 1vw;
       width: 6vh;
       height: 4vh;
       background-color: white;
+      padding: 0;
       cursor: pointer;
       border-radius: 5px;
       border: 1px solid;

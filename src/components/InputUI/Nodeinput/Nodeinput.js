@@ -149,6 +149,7 @@ export default function Nodeinput(props) {
                   x: +refedit.current.childNodes[1].childNodes[0].value,
                   y: +refedit.current.childNodes[2].childNodes[0].value,
                   z: +refedit.current.childNodes[3].childNodes[0].value,
+                  restrain: data.restrain,
                 },
               ];
             } else {
@@ -220,6 +221,7 @@ export default function Nodeinput(props) {
                         x: newnode[0],
                         y: newnode[1],
                         z: newnode[2],
+                        restrain: { d1: 0, d2: 0, d3: 0, r1: 0, r2: 0, r3: 0 },
                       },
                     ]);
                     refx.current.value = "";

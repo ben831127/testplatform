@@ -1,0 +1,100 @@
+import React from "react";
+import * as THREE from "three";
+import { Line, Text } from "@react-three/drei";
+
+export default function DistributedLoadYdir(props) {
+  const color = "red";
+
+  const ele = props.BCelementdatas.filter(
+    (data) => data.label === props.load.elementlabel
+  )[0];
+
+  const start = props.nodesdatas.filter(
+    (data) => data.label === ele.startnode
+  )[0];
+
+  const end = props.nodesdatas.filter((data) => data.label === ele.endnode)[0];
+
+  const elevec = { x: end.x - start.x, y: end.y - start.y, z: end.z - start.z };
+
+  const length = Math.sqrt(elevec.x ** 2 + elevec.y ** 2 + elevec.z ** 2);
+
+  const max_Wy = props.maxValue;
+  const arrowscale = Math.abs(props.load.Wy / max_Wy);
+  const arrowDistributedLength = length - arrowscale;
+
+  const yOffset = props.arrowdir.z * arrowscale;
+
+  const arrowsposition = [
+    new THREE.Vector3(0, 0, -yOffset),
+    new THREE.Vector3(
+      (props.dir.x * length * 1) / 5,
+      (props.dir.z * length * 1) / 5,
+      (-props.dir.y * length * 1) / 5 - yOffset
+    ),
+    new THREE.Vector3(
+      (props.dir.x * length * 2) / 5,
+      (props.dir.z * length * 2) / 5,
+      (-props.dir.y * length * 2) / 5 - yOffset
+    ),
+    new THREE.Vector3(
+      (props.dir.x * length * 3) / 5,
+      (props.dir.z * length * 3) / 5,
+      (-props.dir.y * length * 3) / 5 - yOffset
+    ),
+    new THREE.Vector3(
+      (props.dir.x * length * 4) / 5,
+      (props.dir.z * length * 4) / 5,
+      (-props.dir.y * length * 4) / 5 - yOffset
+    ),
+    new THREE.Vector3(
+      (props.dir.x * length * 5) / 5,
+      (props.dir.z * length * 5) / 5,
+      (-props.dir.y * length * 5) / 5 - yOffset
+    ),
+  ];
+
+  const degZ = Math.acos(
+    (length * elevec.x) / (length * Math.sqrt(elevec.x ** 2 + elevec.y ** 2))
+  );
+
+  const degY = Math.acos(
+    (elevec.x ** 2 + elevec.y ** 2) /
+      (Math.sqrt(elevec.x ** 2 + elevec.y ** 2 + elevec.z ** 2) *
+        Math.sqrt(elevec.x ** 2 + elevec.y ** 2))
+  );
+
+  return (
+    <mesh position={[start.x, start.z, -start.y]} rotation={[0, degZ, degY]}>
+      {arrowsposition.map((position) => (
+        <arrowHelper
+          key={Math.random()}
+          args={[
+            props.arrowdir,
+            position,
+            arrowscale,
+            color,
+            arrowscale / 5,
+            arrowscale / 10,
+          ]}
+        ></arrowHelper>
+      ))}
+      <Line
+        points={[
+          [0, 0, -yOffset],
+          [length, 0, -yOffset],
+        ]}
+        color={color}
+      ></Line>
+      <Text
+        color={color}
+        scale={0.3}
+        fillOpacity={10}
+        visible={true}
+        position={[length / 2, 0.2, -yOffset]}
+      >
+        {props.load.Wy}
+      </Text>
+    </mesh>
+  );
+}

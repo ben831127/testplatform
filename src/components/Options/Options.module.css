@@ -15,7 +15,7 @@
   padding: 1rem;
   width: 100%;
   max-width: 30%;
-  height: 30%;
+  height: 40%;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -25,14 +25,16 @@
   align-items: center;
 }
 .options .inner .extrude,
-.options .inner .displaycolor {
+.options .inner .displaycolor,
+.options .inner .release {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .options .inner .extrude div,
-.options .inner .displaycolor div {
+.options .inner .displaycolor div,
+.options .inner .release div {
   padding: 0 1rem;
 }
 .options .inner .btn {
@@ -41,6 +43,7 @@
 }
 .options .inner .btn button {
   margin: 1rem 1rem;
+  padding: 0;
   width: 3rem;
   height: 2rem;
   background-color: rgba(128, 128, 128, 0.5);
